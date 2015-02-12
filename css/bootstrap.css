@@ -4169,6 +4169,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #00AF00;
   background-color: transparent;
 }
+/*.hover-special a:hover {      ***
+  color: #00AF00;
+  background-color: transparent;
+}
+.hover-special a{
+  color:#fff;
+}*/
 .navbar-default .navbar-text {
   color: #00AF00;
 }
