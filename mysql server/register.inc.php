@@ -59,8 +59,8 @@ if (isset($_POST['username'], $_POST['p'], $_POST['firstname'], $_POST['lastname
         $password = 
         $height = ($feet*12 + $inches);
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO users (username, password, height, weight, DOB, firstname, surname, gender) VALUES (?, ?, ?, ?)")) {
-            $insert_stmt->bind_param('sssssss', $username, $password, $height, $weight, $DateOfBirth, $firstname, $lastname, $gender);
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO users (username, password, height, weight, DOB, firstname, surname, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")) {
+            $insert_stmt->bind_param('ssssssss', $username, $password, $height, $weight, $DateOfBirth, $firstname, $lastname, $gender);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
