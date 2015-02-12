@@ -13,7 +13,7 @@
 	<key>save_editor_content</key>
 	<true/>
 	<key>save_password</key>
-	<true/>
+	<false/>
 	<key>version</key>
 	<integer>1</integer>
 	<key>windows</key>
@@ -27,9 +27,9 @@
 			<array>
 				<dict>
 					<key>isAbsolutePath</key>
-					<true/>
+					<false/>
 					<key>path</key>
-					<string>/Users/keithkroell/Documents/Untitled 1.spf</string>
+					<string>52668793-BFDE-4814-9591-BEA50F861278.spf</string>
 				</dict>
 			</array>
 		</dict>
