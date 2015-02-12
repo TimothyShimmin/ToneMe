@@ -49,4 +49,14 @@ function login($username, $password, $mysqli)
 		return false;
 	}
 }
+
+function returnListActivities($mysqli, $legs, $arms, $core, $cardio)
+{
+	if($stmt = $mysqli->prepare("SELECT activityName, Activity-ID FROM activities WHERE Legs = " + $legs + " AND Core = " + $core + " AND Cardio = " + $cardio))
+	{
+		$stmt->execute();
+		$stmt->store_result();
+		$stmt->fetch();
+	}
+}
 ?>
