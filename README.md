@@ -19,5 +19,6 @@ Membership
 <b>Timothy</b> -> Front End Programmer <p></p>
 <b>Ian</b> -> Front/Back End Programmer <p></p>
 <b>David</b> -> Back End Programmer <p></p>
+<b>Clare</b> -> UI/UX Graphics<p></p>
 
 
