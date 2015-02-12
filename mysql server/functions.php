@@ -26,8 +26,7 @@ function start_session(){
     session_regenerate_id(true);
 }
 
-function login($username, $password, $mysqli)
-{
+function login($username, $password, $mysqli) {
 	if($stmt = $mysqli->prepare("SELECT id, username, password FROM Users"))
 	{
 	$stmt->execute();
@@ -47,6 +46,15 @@ function login($username, $password, $mysqli)
 	}else{
 		//user does not exist
 		return false;
+	}
+}
+
+function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
+	if($stmt = $mysqli->prepare("SELECT activityName, Activity-ID FROM activities WHERE Legs = " + $legs + " AND Core = " + $core + " AND Cardio = " + $cardio))
+	{
+		$stmt->execute();
+		$stmt->store_result();
+		$stmt->fetch();
 	}
 }
 ?>
