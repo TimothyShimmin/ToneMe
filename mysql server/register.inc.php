@@ -10,11 +10,11 @@ if (isset($_POST['username'], $_POST['p'], $_POST['firstname'], $_POST['lastname
     $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING);
     $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
-    if (checkdate($int year + "-" + $int day + "-" + $int month))
-    $DateOfBirth = filter_input(INPUT_POST, 'DOB', FILTER_SANITIZE_DATE);
+    $DateOfBirth = filter_input(INPUT_POST, 'DOB', FILTER_SANITIZE_STRING);
     $feet = filter_input(INPUT_POST, 'feet', FILTER_SANITIZE_NUMBER_INT);
     $inches = filter_input(INPUT_POST, 'inches', FILTER_SANITIZE_NUMBER_INT);
     $weight = filter_input(INPUT_POST, 'weight', FILTER_SANITIZE_NUMBER_INT);
+    $gender = filter_input(INPUT_POST), 'gender', FILTER__SANITIZE_STRING);
 
     if (strlen($password) != 128) {
         // The hashed pwd should be 128 characters long.
@@ -57,10 +57,10 @@ if (isset($_POST['username'], $_POST['p'], $_POST['firstname'], $_POST['lastname
  
         // Create password 
         $password = 
- 
+        $height = ($feet*12 + $inches);
         // Insert the new user into the database 
-        if ($insert_stmt = $mysqli->prepare("INSERT INTO users (id, username, password, DOB, ) VALUES (?, ?, ?, ?)")) {
-            $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
+        if ($insert_stmt = $mysqli->prepare("INSERT INTO users (username, password, height, weight, DOB, firstname, surname, gender) VALUES (?, ?, ?, ?)")) {
+            $insert_stmt->bind_param('sssssss', $username, $password, $height, $weight, $DateOfBirth, $firstname, $lastname, $gender);
             // Execute the prepared query.
             if (! $insert_stmt->execute()) {
                 header('Location: ../error.php?err=Registration failure: INSERT');
