@@ -14,9 +14,6 @@ if (login_check($mysqli) == true) {
     $logged = 'out';
 }
 ?>
-
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -322,10 +319,10 @@ if (login_check($mysqli) == true) {
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>Tone Me is a web app designed to include persons who may have limited or restricted range of movement. This app is designed to cater to the needs of people such as atheletes or other members of the community who may need services sch as physical therapy.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>The concept for Tone Me was created, drafted, and implemented by five members of the Christopher Newport University community in Newport News, VA. Team members include Clare Crawford, David Kroell, Ian Miller, Phu Quach, and Tim Shimmin.</p>
                 </div>
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
@@ -341,7 +338,7 @@ if (login_check($mysqli) == true) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Contact Us</h2>
                     <hr class="star-primary">
                 </div>
             </div>
