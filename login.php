@@ -1,5 +1,6 @@
 <?php
-print_r($_POST);
+print_r("We promise stuff will be here soon");
+die();
 
 include_once 'connect.php';
 include_once 'functions.php';
@@ -10,7 +11,7 @@ if (isset($_POST['username']$_POST['password'])) {
     $user = $_POST['username'];
     $password = $_POST['password']; 
 
-    var x = login($username, $password, $mysqli);
+    $x = login($username, $password, $mysqli);
  
     if (x == true) {
         // Login success 

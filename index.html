@@ -63,21 +63,22 @@
                             <a href="#contact">Contact</a>
                         </li>
                         <li>
-                           <?php if (login_check($mysqli) == true){
-                              echo $logged;	
-                              ?> 
-                              <a href='mysql server/logout.php'>Log out</a>;
+                         <?php if (login_check($mysqli) == true){
+                          echo $logged;	
+                          ?> 
+                          <a href='mysql server/logout.php'>Log out</a>;
 
-                              <?php } ?>
+                          <?php } ?>
 
-                          </li>
-                      </ul>
-                  </div>
-                  <!-- /.navbar-collapse -->
+                      </li>
+                  </ul>
               </div>
-              <!-- /.container-fluid -->
-          </nav>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
 
+<<<<<<< HEAD
           <!-- Header -->
           <header>
             <div class="container">
@@ -99,220 +100,243 @@
                         <div class="panel-title">Sign In</div>
                         <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
                     </div>     
+=======
+      <!-- Header -->
+      <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/ToneMeLogo.png" alt="ToneMe" height="300" width="300">
+                    <div class="intro-text">
+                        <span class="name">Tone Me</span>
+                        <hr class="star-light">
+                        <span class="skills">Exercise the way you want.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container">    
+                <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+                    <div class="panel panel-info" >
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign In</div>
+                            <!-- <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div> -->
+                        </div>     
+>>>>>>> origin/master
 
-                    <div style="padding-top:30px" class="panel-body" >
+                        <div style="padding-top:30px" class="panel-body" >
 
-                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                        
+                            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-                        <form id="loginform" class="form-horizontal" role="form" action="mysqlServer/login.php" method="POST">
 
-                            <input type="hidden" name="test" value="Kill the wabbit" />
-                            
 
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username">                                        
-                            </div>
-                            
-                            <div style="margin-bottom: 25px" class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
-                            </div>
+                            <form id="loginform" class="form-horizontal" role="form" action="mysqlServer/login.php" method="POST">
 
-                            <div style="margin-top:10px" class="form-group">
-                                <!-- Button -->
+                                <input type="hidden" name="test" value="Kill the wabbit" />
 
-                                <div class="col-sm-12 controls">
-                                   
-                                   
-                                  <input id="btn-login" type="submit" class="btn btn-success" value="Login" onClick="document.getElementById('loginform').submit()"> 
 
-                                  <a id="btn-fblogin" href="#" class="btn btn-primary" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign up</a>
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username">                                        
+                                </div>
 
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                </div>
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+
+
+                                      <input id="btn-login" type="submit" class="btn btn-success" value="Login" onClick="document.getElementById('loginform').submit()"> 
+
+                                      <a id="btn-fblogin" href="#" class="btn btn-primary" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign up</a>
+
+                                  </div>
                               </div>
-                          </div>
 
-                          
-                      </form>     
-                  </div>                     
-              </div>  
-          </div>
-          <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">Sign Up</div>
-                    <!-- <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div> -->
-                </div>  
-                <div class="panel-body" >
-                    <form  id="signupform" class="form-horizontal" role="form">
-                        
-                        <div id="signupalert" style="display:none" class="alert alert-danger">
-                            <p>Error:</p>
-                            <span></span>
-                        </div>
-                        
-                        
-                        <!--  REGISTER  -->
-                        
-                        
-                        
-                        <div class="form-group">
-                            <label for="email" class="col-md-3 control-label">Username</label>
-                            <div class="col-md-9">
-                                <input autofocus = "autofocus" type="text" onkeyup="verifyAlphaNumeric(this)" required class="form-control" name="username" placeholder="Username">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="col-md-3 control-label">Password</label>
-                            <div class="col-md-9">
-                                <input type="password" class="form-control" onkeyup="verifyAlphaNumeric(this)" name="passwd" placeholder="Password">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="firstname" class="col-md-3 control-label">First Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" onkeyup="verifyAlphaNumeric(this)" pattern = "^\D{0,100}$" required="required" name="firstname" placeholder="First Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastname" class="col-md-3 control-label">Last Name</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" onkeyup="verifyAlphaNumeric(this)" name="lastname" placeholder="Last Name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="age" class="col-md-3 control-label">Date of birth</label>
-                            <div class="col-md-9">
-                                <input type="date" class="form-control" name="age" placeholder="Date of Birth">
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="height" class="col-md-3 control-label">Height</label>
-                            <div class="col-md-9">
-                                <input type="number" class="form-control" name="feet" placeholder="Feet">
-                                <input type="number" class="form-control" name="inch" placeholder="Inches">
+                          </form>     
+                      </div>                     
+                  </div>  
+              </div>
+              <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                        <!-- <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div> -->
+                    </div>  
+                    <div class="panel-body" >
+                        <form  id="signupform" class="form-horizontal" role="form">
+
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="weight" class="col-md-3 control-label">Weight</label>
-                            <div class="col-md-9">
-                                <input type="number" class="form-control" name="weight" placeholder="Weight (lbs)">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-xs-3 control-label">Gender</label>
-                            <div class="col-xs-9">
-                                <div class="btn-group" data-toggle="buttons">
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="gender" value="male" /> Male
-                                    </label>
-                                    <label class="btn btn-default">
-                                        <input type="radio" name="gender" value="female" /> Female
-                                    </label>
+
+
+                            <!--  REGISTER  -->
+
+
+
+                            <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Username</label>
+                                <div class="col-md-9">
+                                    <input autofocus = "autofocus" type="text" onkeyup="verifyAlphaNumeric(this)" required class="form-control" name="username" placeholder="Username">
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Password</label>
+                                <div class="col-md-9">
+                                    <input type="password" class="form-control" onkeyup="verifyAlphaNumeric(this)" name="passwd" placeholder="Password">
+                                </div>
+                            </div>
 
-                        <div class="form-group">
-                            <!-- Button -->                                        
-                            <div class="col-md-offset-3 col-md-9">
-                                <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                                <span style="margin-left:8px;"></span>  
+                            <div class="form-group">
+                                <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" onkeyup="verifyAlphaNumeric(this)" pattern = "^\D{0,100}$" required="required" name="firstname" placeholder="First Name">
+                                </div>
                             </div>
-                        </div>
-                        
-                        
-                        
-                        
-                    </form>
-                </div>
-            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" onkeyup="verifyAlphaNumeric(this)" name="lastname" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="age" class="col-md-3 control-label">Date of birth</label>
+                                <div class="col-md-9">
+                                    <input type="date" class="form-control" name="age" placeholder="Date of Birth">
+                                </div>
+                            </div>
 
-            
-            
-            
-        </div> 
-            </div>
-        </header>
+                            <div class="form-group">
+                                <label for="height" class="col-md-3 control-label">Height</label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="feet" placeholder="Feet">
+                                    <input type="number" class="form-control" name="inch" placeholder="Inches">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight" class="col-md-3 control-label">Weight</label>
+                                <div class="col-md-9">
+                                    <input type="number" class="form-control" name="weight" placeholder="Weight (lbs)">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-xs-3 control-label">Gender</label>
+                                <div class="col-xs-9">
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="gender" value="male" /> Male
+                                        </label>
+                                        <label class="btn btn-default">
+                                            <input type="radio" name="gender" value="female" /> Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
 
-    </div>
-    
+                            <div class="form-group">
+                                <!-- Button -->                                        
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                                    <span style="margin-left:8px;"></span>  
+                                </div>
+                            </div>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Workouts</h2>
-                    <hr class="star-primary">
+
+
+
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/workouts/arms.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/workouts/legs.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/workouts/cardio.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/workouts/Core.png" class="img-responsive" alt="">
-                    </a>
-                </div>
+
+
+
+
+            </div> 
+        </div>
+    </header>
+
+</div>
+
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Workouts</h2>
+                <hr class="star-primary">
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/workouts/arms.png" class="img-responsive" alt="">
+                </a>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-                </div>
+            <div class="col-md-6 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/workouts/legs.png" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/workouts/cardio.png" class="img-responsive" alt="">
+                </a>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/workouts/Core.png" class="img-responsive" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="success" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>About</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-2">
+                <p>Tone Me is a web app designed to include persons who may have limited or restricted range of movement. This app is designed to cater to the needs of the people such as atheletes or other members of the community who may need services such as physical therapy.</p>
+            </div>
+            <div class="col-lg-4">
+                <p>The concept for Tone Me was created drafted and implemented by five members of the Christopher Newport University community in Newport News, VA. Team members include Clare Crawford, Ian Miller, David Kroell, Tim Shimmin, and Phu Quach.</p>
+            </div>
                 <!-- <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="#" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Theme
@@ -411,7 +435,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Tone Me 2015
+                        <div class="end-footer">
+                            Copyright &copy; Tone Me 2015
+                        </div>
                     </div>
                 </div>
             </div>
