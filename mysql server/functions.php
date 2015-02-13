@@ -50,7 +50,40 @@ function login($username, $password, $mysqli) {
 }
 
 function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
-	if($stmt = $mysqli->prepare("SELECT activityName, Activity-ID FROM activities WHERE Legs = " + $legs + " AND Core = " + $core + " AND Cardio = " + $cardio))
+	$sql = "SELECT activityName, Activity-ID FROM activities";
+
+	if(!is_null($legs) || !is_null($arms) || !is_null($core) || !is_null($cardio)){
+		$alreadyAddingStuff = false;
+		$sql .=" where";
+		if(!is_null($legs)){
+			$sql .= " Legs = " . $legs;
+		}
+		if(!is_null($arms)){
+			if($alreadyAddingStuff == true){
+				$sql .= " OR "
+			} else {
+				$alreadyAddingStuff = true;
+			}
+			$sql .= " Arms = " . $arms;
+		}
+		if(!is_null($core)){
+			if($alreadyAddingStuff == true){
+				$sql .= " OR "
+			} else {
+				$alreadyAddingStuff = true;
+			}
+			$sql .= " Core = " . $core;
+		}
+		if(!is_null($legs)){
+			if($alreadyAddingStuff == true){
+				$sql .= " OR "
+			} else {
+				$alreadyAddingStuff = true;
+			}
+			$sql .= " Cardio = " . $cardio;
+		}
+	}
+	if($stmt = $mysqli->prepare($sql))
 	{
 		$stmt->execute();
 		$stmt->store_result();
