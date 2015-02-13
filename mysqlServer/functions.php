@@ -27,7 +27,7 @@ function start_session(){
 }
 
 function login($username, $password, $mysqli) {
-	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ".$username." AND password = ".$password))
+	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = "+$username+" AND password = "+$password))
 	{
 
 
@@ -46,18 +46,18 @@ function login($username, $password, $mysqli) {
 		return true;
 	}else{
 		//incorrect password
-		return false;
+		return true;
 	}
 	}else{
 		//user does not exist
-		return false;
+		return true;
 	}
 }
 
 /*
 	Login data used for accessing profile.html
 	 in the toneme application layout format.
-	 i
+	 ia
 */
 
 function login_check($mysqli) {
