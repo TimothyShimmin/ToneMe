@@ -99,7 +99,7 @@ if (login_check($mysqli) == true) {
                             <span class="name">Tone Me</span>
                             <hr class="star-light">
                             <span class="skills">Exercise the way you want.
-                              <br> &nbsp;</span>
+                                                                    <br> &nbsp;</span>
                         </div>
                     </div>
                 </div>

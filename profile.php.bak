@@ -61,7 +61,7 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="img/ToneMeLogo.png" alt="ToneMe" height="300" width="300">
                     <div class="intro-text">
-                        <span class="name">My Workouts</span>
+                        <span class="name">Activities Tone-Me</span>
                         <hr class="star-light">
                         <span class="skills">Exercise the way you want.</span>
                     </div>
@@ -70,141 +70,53 @@
         </div>
     </header>
        
-    <div id="wrapper">
-
-            
-
-        <div id="page-wrapper">
-
-            <div class="container-fluid">
-
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            <b>Name of Exercise:&nbsp;<p id="exName">Push Ups  </p></b> 
-                        </h1>
-                        
-                    </div>
+    <div class="wrapper">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+    	 		<div class="well profile">
+            <div class="col-sm-12">
+                <div class="col-xs-12 col-sm-8">
+                    <h2>Nicole Pearson</h2> 	 	
+                    <br>
+                    <p><strong>Height: </strong> 5 ft 5 </p>
+                    <p><strong>Weight: </strong> 155 lb </p>
+                    <p><strong>Current activities group: </strong> Leg, Core </p>
+                    
+                    
+                </div>             
+                <div class="col-xs-12 col-sm-4 text-center">
+                    		<br>
+                    		<br>
+                        <img src="img/body/wholedude.png" alt="" class="img-circle img-responsive" width="80" height="250">
+                       
+                    
+                </div>
+            </div>            
+            <div class="col-xs-12 divider text-center">
+                <div class="col-xs-12 col-sm-4 emphasis">
+                    
+                   <a href="activities.html" ><button class="btn btn-success btn-block" ><span class="fa fa-rocket" ></span> Start my Workout </button></a>
                 </div>
                 
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-cog fa-spin fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div style="font-size:25px">Number of Reps</div>
-                                        <div class="numOfReps" style="font-size:20px">8</div>
-                                        
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                       <div style="font-size:25px">Number of Sets</div>
-                                        <div class="numOfSets" style="font-size:20px">3</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-star fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div style="font-size:25px">Weight to Reps</div>
-                                        <div class="RepWeight" style="font-size:20px">150</div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </div>
-                   
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-eye fa-fw fa-2x"></i> &nbsp;Image Of Exercise</h3>
-                            </div>
-                            <div class="panel-body">
-                                <div class="workout-chart"><center><img id="image" src="img/workouts/arms.png" alt="Pic" title="Workout Image" /></center></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                  <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-chevron-circle-left fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div style="font-size:45px"><b>PREVIOUS EXERCISE</b></div>
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                    <div class="col-md-6">
-                        <div class="panel">
-                            <div class="panel-heading">
-                                <div class="row">
-                                	<div class="col-xs-9 text-left">
-                                       <div style="font-size:45px"><b>NEXT EXERCISE</b></div>
-                                    </div>
-                                    <div class="col-xs-3 text-right">
-                                        <i class="fa fa-chevron-circle-right fa-5x"></i>
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-4 emphasis">
+          
+                    <button class="btn btn-info btn-block"><span class="fa fa-user""></span> Edit Profile </button>
                     
-                   
                 </div>
-                <!-- /.row -->
-
+                <div class="col-xs-12 col-sm-4 emphasis">
+                   
+                    <div class="btn-group dropup btn-block">
+                      <a href="limbSelection.html" ><button type="button" class="btn btn-primary"><span class="fa fa-gear"></span> Change Activities Groups</button>
+                      
+                      </button>
+                      
+                    </div>
+                </div>
             </div>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- /#page-wrapper -->
-
-    </div>
+    	 </div>                 
+		</div>
+	</div>
+</div>
     <!-- /#wrapper -->
         
     
