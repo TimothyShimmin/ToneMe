@@ -11,7 +11,7 @@ if (isset($_POST['username']$_POST['password'])) {
     $user = $_POST['username'];
     $password = $_POST['password']; 
 
-    var x = login($username, $password, $mysqli);
+    $x = login($username, $password, $mysqli);
  
     if (x == true) {
         // Login success 
