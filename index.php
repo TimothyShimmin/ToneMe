@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 include_once 'mysqlServer/connect.php';
 include_once 'mysqlServer/functions.php';
