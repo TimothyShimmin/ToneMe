@@ -7,16 +7,16 @@
 		<div>
 			<form action="functions.php">
 				<p>
-					<input  type="checkbox" name="Arms"  placeholder="Arms" onclick="check(this)"> Arms
+					<input type="checkbox" name="Arms" onclick="check(this)" placeholder="Arms"> Arms
 				</p> 
 				<p>
-					<input id="Legs" type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
+					<input type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
 				</p>   
 				<p>                                   
-					<input id="Core" type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
+					<input type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
 				</p>
 				<p>                                    
-					<input id="Cardio" type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
+					<input type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
 				</p>
 		<!-- <p>
 			<input id="heart" type="checkbox" name="heart" value="" placeholder="heart">Heart
@@ -29,11 +29,11 @@
 			<!-- javascript! -->
 		<script>
 		function check(inputElement) {
-			var limbName=inputElement.getAttribute("name");
-			if(document.getElementById(limbName).style.visibility == "visible"){
-				document.getElementById("Arms").style.visibility = "hidden";
+			var limbName = inputElement.getAttribute("name");
+			if(	document.getElementById(limbName).style.visibility == "visible"){
+				document.getElementById(limbName).style.visibility = "hidden";
 			} else {
-				document.getElementById("Arms").style.visibility = "visible";
+				document.getElementById(limbName).style.visibility = "visible";
 			}
 		}
 		</script>
@@ -41,7 +41,8 @@
 </div>
 
 <div class="bodyOverlap"> <!-- body image  *** overlap limbs -->
-	<img class="wholedude abs" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">
+	<!-- <img class="wholedude abs" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">  *** usemap for link on image (supposed to be for click and cause highlight/checkbox -->
+	<img class="wholedude abs" src="img\body\wholedude.png" alt="torso" width="300" height="500">
 	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" style="top:97px;" id="Arms" width="100" height="185">
 	<img class="limb abs rarm" src="img\body\arm-right.png" alt="right arm" style="top:97px; left:200px;" width="100" height="185">
 	<img class="limb abs lleg" src="img\body\leg-left.png" alt="left leg" style="top:282px; left:46px;" width="103" height="220">
