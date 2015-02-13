@@ -6,6 +6,8 @@ include_once 'functions.php';
 //session_start();  //Our custom secure way of starting a PHP session.
 echo("<br>");
 print_r($_POST);
+echo("<br>");
+print_r($_GET);
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $_POST['username'];
