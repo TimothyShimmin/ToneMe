@@ -1,5 +1,5 @@
 <?php
-print_r($_POST);
+print_r("We promise stuff will be here soon");
 die();
 
 include_once 'connect.php';
