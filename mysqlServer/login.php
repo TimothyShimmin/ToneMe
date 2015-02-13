@@ -8,6 +8,8 @@ echo("<br>");
 print_r($_POST);
 echo("<br>");
 print_r($_GET);
+echo("<br>");
+print_r($_REQUEST);
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $_POST['username'];
