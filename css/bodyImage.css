@@ -1,0 +1,41 @@
+
+
+
+
+.bodyOverlap {
+	position:relative;
+	display:inline;
+
+}
+
+wholedude {
+	z-index="1";
+
+}
+.limb {
+	z-index="2";
+/*	visibility: hidden;
+*/
+
+}
+.abs {
+	position:absolute;
+}
+
+/*.larm {
+	visibility: hidden;
+
+}
+
+.rarm {
+	visibility: hidden;
+
+}
+
+leg-left {
+
+} 
+
+leg-right {
+
+}*/
