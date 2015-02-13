@@ -80,7 +80,7 @@
                     <br>
                     <p><strong>Height: </strong> 5 ft 5 </p>
                     <p><strong>Weight: </strong> 155 lb </p>
-                    <p><strong>Current activities group: </strong> Leg, Core </p>
+                    <p><strong>Current activities group: </strong> Arms, Legs, Core, Cardio</p>
                     
                     
                 </div>             
