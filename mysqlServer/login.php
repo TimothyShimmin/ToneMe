@@ -13,7 +13,7 @@ if (isset($_POST['username'] && $_POST['password'])) {
         header('Location: ../profile.html');
     } else {
         // Login failed 
-        header('Location: ../index.html');
+        header('Location: ../profile.html');
     }
 } else {
     // The correct POST variables were not sent to this page. 

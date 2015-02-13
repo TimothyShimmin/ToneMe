@@ -48,22 +48,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Workouts</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -76,7 +61,7 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="img/ToneMeLogo.png" alt="ToneMe" height="300" width="300">
                     <div class="intro-text">
-                        <span class="name">Tone Me</span>
+                        <span class="name">My Workouts/span>
                         <hr class="star-light">
                         <span class="skills">Exercise the way you want.</span>
                     </div>
@@ -97,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <br> <small><b>Name of Exercise : </b></small>
+                            <b>Name of Exercise : </b>
                         </h1>
                         
                     </div>
@@ -165,7 +150,7 @@
                                 <h3 class="panel-title"><i class="fa fa-eye fa-fw fa-2x"></i> &nbsp;Image Of Exercise</h3>
                             </div>
                             <div class="panel-body">
-                                <div class="workout-chart"><img src="img/workouts/arms.png" alt="Pic" title="Workout Image" /></div>
+                                <div class="workout-chart"><center><img src="img/workouts/arms.png" alt="Pic" title="Workout Image" /></center></div>
                             </div>
                         </div>
                     </div>
