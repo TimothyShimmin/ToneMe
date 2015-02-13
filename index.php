@@ -2,6 +2,8 @@
 include_once 'mysqlServer/connect.php';
 include_once 'mysqlServer/functions.php';
  
+print_r("test");
+
 sec_session_start();
  
 if (login_check($mysqli) == true) {
