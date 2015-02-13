@@ -7,7 +7,7 @@
 		<div>
 			<form action="functions.php">
 				<p>
-					<input id="Arms" type="checkbox" name="Arms"  placeholder="Arms" > Arms
+					<input id="Arms" type="checkbox" name="Arms"  placeholder="Arms" onclick="check()"> Arms
 				</p> 
 				<p>
 					<input id="Legs" type="checkbox" name="Legs"  placeholder="Legs"> Legs  
@@ -25,16 +25,16 @@
 			<!-- SUBMISSION BUTTON -->
 			<input type="submit" value="Submit">
 		</p>
-		
+
 			<!-- javascript! -->
 		<script>
 		function check() {
-			document.getElementById("myCheck").checked = true;
+			document.getElementById("Arms").style.visibility = "visible";
 		}
 
-		function uncheck() {
-			document.getElementById("myCheck").checked = false;
-		}
+		// function uncheck() {
+		// 	document.getElementById("myCheck").checked = false;
+		// }
 		</script>
 	</form>
 </div>
