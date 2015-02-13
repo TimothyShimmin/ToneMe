@@ -7,8 +7,10 @@ start_session(); // Our custom secure way of starting a PHP session.
 if (isset($_POST['username']$_POST['password'])) {
     $user = $_POST['username'];
     $password = $_POST['password']; 
+
+    var x = login($username, $password, $mysqli);
  
-    if (login($username, $password, $mysqli) == true) {
+    if (x == true) {
         // Login success 
         header('Location: ../profilepage.php');
     } else {

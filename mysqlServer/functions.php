@@ -44,13 +44,13 @@ function login($username, $password, $mysqli) {
 		$_SESSION['user_id'] = $id;
 		$_SESSION['login_string'] = $password;
 		return true;
-	}else{
+	} else {
 		//incorrect password
-		return true;
+		return false;
 	}
-	}else{
+	} else {
 		//user does not exist
-		return true;
+		return false;
 	}
 }
 
