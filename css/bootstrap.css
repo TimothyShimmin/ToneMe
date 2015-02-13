@@ -2584,6 +2584,10 @@ select[multiple].form-group-lg .form-control {
   border-color: #ffffff;
   background-color: #18bc9c;
 }
+.workoutchart{
+		background-color: #333333;
+    margin: auto;
+}
 .has-success .form-control-feedback {
   color: #ffffff;
 }
