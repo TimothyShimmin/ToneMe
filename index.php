@@ -1,7 +1,7 @@
 <?php
-include_once 'mysqlServer/connect.php';
-include_once 'mysqlServer/functions.php';
- 
+include_once 'connect.php';
+include_once 'functions.php';
+
 sec_session_start();
  
 if (login_check($mysqli) == true) {
