@@ -6,9 +6,9 @@ include_once 'functions.php';
 echo("<br>");
 print_r($_POST);
 
-if (isset($_POST['login-username']) && isset($_POST['login-password'])) {
-    $user = $_POST['login-username'];
-    $password = $_POST['login-password'];
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $user = $_POST['username'];
+    $password = $_POST['password'];
     if (login($username, $password, $mysqli)) {
         // Login success 
         header('Location: ../profilepage.php');
