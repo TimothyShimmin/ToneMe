@@ -22,11 +22,6 @@ if (isset($_POST['username'], $_POST['p'], $_POST['firstname'], $_POST['lastname
         $error_msg .= '<p class="error">Invalid password configuration.</p>';
     }
  
-    // Username validity and password validity have been checked client side.
-    // This should should be adequate as nobody gains any advantage from
-    // breaking these rules.
-    //
- 
     // check existing username
     $prep_stmt = "SELECT id FROM users WHERE username = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
