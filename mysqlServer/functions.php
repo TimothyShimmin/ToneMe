@@ -29,8 +29,6 @@ function start_session(){
 function login($username, $password, $mysqli) {
 	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ".$username." AND password = ".$password))
 	{
-
-
 	$stmt->execute();
 	$stmt->store_result();
 	
