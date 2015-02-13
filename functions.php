@@ -22,30 +22,29 @@ function start_session(){
         $HTTPonly);
     // Sets the session name to the one set above.
     session_name($session_name);
-    session_start();            // Start the PHP session 
-    session_regenerate_id(true);
+    //session_start();            // Start the PHP session 
+    //session_regenerate_id(true);
 }
 
 function login($username, $password, $mysqli) {
-	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = "+$username+" AND password = "+$password))
+	$sql = "SELECT id FROM users WHERE username = '".$username."' AND password = '".$password."'";
+	if($stmt = $mysqli->prepare($sql))
 	{
-	$stmt->execute();
-	$stmt->store_result();
-	
-	$stmt->bind_result($id, $user, $pass);
-	$stmt->fetch();
-
-	if($mysqli->num_rows== 1)
-	{
-		//correct password
-		$_SESSION['username'] = $username;
-		$_SESSION['user_id'] = $id;
-		$_SESSION['login_string'] = $password;
-		return true;
-	} else {
-		//incorrect password
-		return false;
-	}
+		$stmt->execute();
+		$stmt->store_result();
+		
+		$stmt->fetch();
+		
+		if($stmt->affected_rows == 1)
+		{
+			//correct password
+			$_SESSION['username'] = $username;
+			$_SESSION['user_id'] = $id;
+			$_SESSION['login_string'] = $password;
+			return true;
+		} else {
+			return false;
+		}
 	} else {
 		//user does not exist
 		return false;

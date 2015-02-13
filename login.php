@@ -8,14 +8,14 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $_POST['username'];
     $password = $_POST['password']; 
 
-    $x = login($username, $password, $mysqli);
- 
-    if (x == true) {
+    $x = login($user, $password, $mysqli);
+    
+    if ($x == true) {
         // Login success 
-        header('Location: ../profilepage.php');
+        header('Location: ./profile.php');
     } else {
         // Login failed 
-        header('Location: ../index.php');
+        header('Location: ./index.php?failedLogin=1');
     }
 } else {
     // The correct POST variables were not sent to this page. 
