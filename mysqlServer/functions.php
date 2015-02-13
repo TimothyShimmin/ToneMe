@@ -36,8 +36,8 @@ function login($username, $password, $mysqli) {
 	
 	$stmt->bind_result($id, $user, $pass);
 	$stmt->fetch();
-	
-	if($stmt->mysqli_num_rows == 1)
+
+	if($mysqli->num_rows== 1)
 	{
 		//correct password
 		$_SESSION['username'] = $username;
@@ -119,7 +119,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($arms)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
@@ -127,7 +127,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($core)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
@@ -135,7 +135,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($legs)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
