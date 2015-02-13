@@ -1,29 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="css/bodyImage.css" rel="stylesheet">
 
-<body>
-	<h1>BODY SELECTION</H1>
-		<div>
-			<form action="functions.php">
-				<p>
-					<input type="checkbox" name="Arms" onclick="check(this)" placeholder="Arms"> Arms
-				</p> 
-				<p>
-					<input type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
-				</p>   
-				<p>                                   
-					<input type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
-				</p>
-				<p>                                    
-					<input type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
-				</p>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Tone Me</title>
+
+	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/freelancer.css" rel="stylesheet">
+
+    <link href="css/bodyImage.css" rel="stylesheet">
+
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body id="page-top" class="index">
+
+    	<!-- Navigation -->
+    	<nav class="navbar navbar-default navbar-fixed-top">
+    		<div class="container">
+    			<!-- Brand and toggle get grouped for better mobile display -->
+    			<div class="navbar-header page-scroll">
+    				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    					<span class="sr-only">Toggle navigation</span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    					<span class="icon-bar"></span>
+    				</button>
+    				<a class="navbar-brand" href="#page-top">Tone Me</a>
+    			</div>
+
+    			<!-- Collect the nav links, forms, and other content for toggling -->
+    			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    				<ul class="nav navbar-nav navbar-right">
+    					<li class="hidden">
+    						<a href="#page-top"></a>
+    					</li>
+    					<li class="page-scroll">
+    						<a href="#portfolio">Workouts</a>
+    					</li>
+    					<li class="page-scroll">
+    						<a href="#about">About</a>
+    					</li>
+    					<li class="page-scroll">
+    						<a href="#contact">Contact</a>
+    					</li>
+    					<li>
+    						<?php if (login_check($mysqli) == true){
+    							echo $logged;	
+    							?> 
+    							<a href='mysql server/logout.php'>Log out</a>;
+
+    							<?php } ?>
+
+    						</li>
+    					</ul>
+    				</div>
+    				<!-- /.navbar-collapse -->
+    			</div>
+    			<!-- /.container-fluid -->
+    		</nav>
+
+    		<!-- Header -->
+    		<header>
+    			<div class="container">
+    				<!-- <div class="row">
+    					<div class="col-lg-12">
+    						<img class="img-responsive" src="img/ToneMeLogo.png" alt="ToneMe" height="300" width="300">
+    						<div class="intro-text">
+    							<span class="name">Tone Me</span>
+    							<hr class="star-light">
+    							<span class="skills">Exercise the way you want.
+    								<br> &nbsp;</span>
+    							</div>
+    						</div>
+    					</div> -->
+    					<div class="container" style="float:right;"> 
+<!--                            <link href="css/bodyImage.css" rel="stylesheet">
+ -->
+    						<body>
+    							<h1>BODY SELECTION</H1>
+    								<div>
+    									<form action="functions.php">
+
+    										<p>
+    											<input type="checkbox" name="Arms" onclick="check(this)" placeholder="Arms"> Arms
+    										</p> 
+    										<p>
+    											<input type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
+    										</p>   
+    										<p>                                   
+    											<input type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
+    										</p>
+    										<p>                                    
+    											<input type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
+    										</p>
 		<!-- <p>
 			<input id="heart" type="checkbox" name="heart" value="" placeholder="heart">Heart
 		</p> -->
 		<p>
 			<!-- SUBMISSION BUTTON -->
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit" href="profile.php">
 		</p>
 
 		<!-- javascript! -->
@@ -58,8 +155,9 @@
 		</script>
 	</form>
 </div>
-
-<div class="bodyOverlap"> <!-- body image  *** overlap limbs -->
+</div>
+<div class="bodyOverlap">
+     <!-- body image  *** overlap limbs -->
 	<!-- <img class="wholedude abs" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">  *** usemap for link on image (supposed to be for click and cause highlight/checkbox -->
 	<img class="wholedude abs" src="img\body\wholedude.png" alt="torso" width="300" height="500">
 	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" id="Arms" style="top:97px;"  width="100" height="185">
@@ -92,6 +190,255 @@
 </div>
 
 
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</header>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+    	<div class="footer-above">
+    		<div class="container">
+    			<div class="row">
+    				<div class="footer-col col-md-4">
+    					<h3>Location</h3>
+    					<p><a href="https://www.google.com/maps/dir//Christopher+Newport+University,+1+Avenue+of+the+Arts,+Newport+News,+VA+23606,+United+States/@37.063874,-76.493809,17z/data=!4m12!1m3!3m2!1s0x89b0784e567e830f:0xa1809303fcb2f3f5!2sChristopher+Newport+University!4m7!1m0!1m5!1m1!1s0x89b0784e567e830f:0xa1809303fcb2f3f5!2m2!1d-76.493809!2d37.063874">Christopher Newport University<br>1 Avenue of the Arts<br>Newport News, VA 23606</a></p>
+    				</div>
+    				<div class="footer-col col-md-4">
+    					<h3>Around the Web</h3>
+    					<ul class="list-inline">
+    						<li>
+    							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+    						</li>
+    						<li>
+    							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+    						</li>
+    						<li>
+    							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+    						</li>
+    						<li>
+    							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+    						</li>
+    						<li>
+    							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+    						</li>
+    					</ul>
+    				</div>
+    				<div class="footer-col col-md-4">
+    					<h3>About Us</h3>
+    					<p>Created at <a href="http://hackathon.dominionenterprises.com/">HackU 2015</a>.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="footer-below">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-12">
+    					Copyright &copy; Tone Me 2015
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+    	<a class="btn btn-primary" href="#page-top">
+    		<i class="fa fa-chevron-up"></i>
+    	</a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-content">
+    		<div class="close-modal" data-dismiss="modal">
+    			<div class="lr">
+    				<div class="rl">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="modal-body">
+    						<h2>Arms Exercises</h2> <!-- top of modal -->
+    						<hr class="star-primary">
+    						<img src="img/workouts/arms.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
+    						<p>Arms exercises focus on strengthening the biceps, triceps and forearms. These exercises help uild muscle as well as tone pre-existing muscles. These exercises often require weights such as dumb bells or kettle bells</p>
+
+    						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-content">
+    		<div class="close-modal" data-dismiss="modal">
+    			<div class="lr">
+    				<div class="rl">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="modal-body">
+    						<h2>Legs Exercises</h2>
+    						<hr class="star-primary">
+    						<img src="img/workouts/legs.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
+    						<p>Leg exercises focus on strengthening the thign and calves. These exercises often include heart/cardio/endurance enhancing. Exercises can both be used with or without the use of free weights.</p>
+
+    						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-content">
+    		<div class="close-modal" data-dismiss="modal">
+    			<div class="lr">
+    				<div class="rl">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="modal-body">
+    						<h2>Cardio Exercises</h2>
+    						<hr class="star-primary">
+    						<img src="img/workouts/cardio.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
+    						<p>These exercises are spcifically geared towards increasing endurance and require no additional free weights.</p>
+
+    						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-content">
+    		<div class="close-modal" data-dismiss="modal">
+    			<div class="lr">
+    				<div class="rl">
+    				</div>
+    			</div>
+    		</div>
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-lg-8 col-lg-offset-2">
+    					<div class="modal-body">
+    						<h2>Core Exercises</h2>
+    						<hr class="star-primary">
+    						<img src="img/workouts/Core.png" class="img-responsive img-centered" alt="" width="300px" height="300px">
+    						<p>These exercises focus on abdomen and lower back muscles (obligues). They require no additional free weights.</p>
+
+    						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+    <script src="js/validator.js"></script>
+    <script src="js/jsonprocess.js"></script>
 
 </body>
 

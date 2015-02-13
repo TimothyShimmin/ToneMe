@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="css/bodyImage.css" rel="stylesheet">
+
+<body>
+	<h1>BODY SELECTION</H1>
+		<div>
+			<form action="functions.php">
+				<p>
+					<input type="checkbox" name="Arms" onclick="check(this)" placeholder="Arms"> Arms
+				</p> 
+				<p>
+					<input type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
+				</p>   
+				<p>                                   
+					<input type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
+				</p>
+				<p>                                    
+					<input type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
+				</p>
+		<!-- <p>
+			<input id="heart" type="checkbox" name="heart" value="" placeholder="heart">Heart
+		</p> -->
+		<p>
+			<!-- SUBMISSION BUTTON -->
+			<input type="submit" value="Submit">
+		</p>
+
+		<!-- javascript! -->
+		<script>
+		function check(inputElement) {
+			var limbName = inputElement.getAttribute("name");
+			if(document.getElementById(limbName).style.visibility == "visible"){
+				if (limbName == "Arms") {				
+					document.getElementById("Arms").style.visibility = "hidden";
+					document.getElementById("Arms2").style.visibility = "hidden";
+				} else if (limbName == "Legs") {
+					document.getElementById("Legs").style.visibility = "hidden";
+					document.getElementById("Legs2").style.visibility = "hidden";
+				} else {
+					document.getElementById(limbName).style.visibility = "hidden";
+				}
+
+			} else {
+				if (limbName == "Arms") {
+					document.getElementById("Arms").style.visibility = "visible";
+					document.getElementById("Arms2").style.visibility = "visible";
+				} else if (limbName == "Legs") {
+					document.getElementById("Legs").style.visibility = "visible";
+					document.getElementById("Legs2").style.visibility = "visible";
+				} else {
+					document.getElementById(limbName).style.visibility = "visible";
+				}	
+
+				// document.getElementById(limbName).style.visibility = "visible";
+			}
+		}
+		</script>
+	</form>
+</div>
+
+<div class="bodyOverlap"> <!-- body image  *** overlap limbs -->
+	<!-- <img class="wholedude abs" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">  *** usemap for link on image (supposed to be for click and cause highlight/checkbox -->
+	<img class="wholedude abs" src="img\body\wholedude.png" alt="torso" width="300" height="500">
+	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" id="Arms" style="top:97px;"  width="100" height="185">
+	<img class="limb abs rarm" src="img\body\arm-right.png" alt="right arm" id="Arms2" style="top:97px; left:200px;" width="100" height="185">
+	<img class="limb abs lleg" src="img\body\leg-left.png" alt="left leg" id="Legs" style="top:282px; left:46px;" width="103" height="220">
+	<img class="limb abs rleg" src="img\body\leg-right.png" alt="right leg" id="Legs2" style="top:282px; left:150px;" width="100" height="220">
+	<img class="limb abs core" src="img\body\torso.png" alt="core" id="Core" style="top:97px; left:90px;" width="120" height="220">
+	<img class="limb abs heart" src="img\body\cardio.png" alt="cardio" id="Cardio" style="top:120px; left:150px;" width="50" height="50">
+
+
+
+<!-- 	multiple links on the image
+-->	<map name="bodyMap">
+		<!-- <area shape="rect"
+		coords="area coordinates"
+		href="area hyperlink" or nohref="nohref"
+		target="hyperlink target"
+		title="bodyMapBase"
+		alt="bodyMapBase"/> -->
+
+<!-- 		<area shape="rect" coords="0,0,100,280" href="http://www.ebay.com/" title="eBay" alt="eBay" />
+-->
+		<!-- 
+		<area shape="" 
+
+		/> -->
+	</map>
+
+
+</div>
+
+
+
+</body>
+
+</html>
