@@ -1,4 +1,6 @@
 <?php
+print_r($_POST);
+
 include_once 'connect.php';
 include_once 'functions.php';
 
