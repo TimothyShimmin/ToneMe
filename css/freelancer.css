@@ -218,7 +218,7 @@ section.success {
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
+    opacity: .4;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -255,7 +255,7 @@ section.success {
     margin-top: 15px;
     border: solid 2px #fff;
     font-size: 20px;
-    color: #fff;
+    color: #403d3b;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -331,7 +331,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #bfb1ae;
+    color: #403d3b;
 }
 
 footer h3 {
@@ -356,7 +356,7 @@ footer .footer-below {
     display: inline-block;
     width: 50px;
     height: 50px;
-    border: 2px solid #fff;
+    border: 2px solid #403d3b;
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
