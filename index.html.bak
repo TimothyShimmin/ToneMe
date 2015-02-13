@@ -1,3 +1,15 @@
+<?php
+include_once 'mysqlServer/connect.php';
+include_once 'mysqlServer/functions.php';
+ 
+start_session();
+ 
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,6 +74,12 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+					<li>
+					<?php if (login_check($mysqli) == true){?> 
+					<a href='mysql server/logout.php'>Log out</a>.</p>";
+					<?php } ?>
+						
+					</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -96,7 +114,11 @@
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
-                        <form id="loginform" class="form-horizontal" role="form">
+<<<<<<< HEAD
+                        <form id="loginform" class="form-horizontal" role="form" >
+=======
+                        <form id="loginform" class="form-horizontal" role="form" action="mysqlServer/login.php">
+>>>>>>> origin/master
                                     
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -110,20 +132,12 @@
                                     
 
                                 
-                            <div class="input-group">
-                                      <!-- <div class="checkbox">
-                                        <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                        </label>
-                                      </div> -->
-                                    </div>
-
-
+                          
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
 
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+                                      <a id="btn-login" href="#" class="btn btn-success" onClick="login.php">Login  </a>
                                       <a id="btn-fblogin" href="#" class="btn btn-primary" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign up</a>
 
                                     </div>
@@ -223,14 +237,7 @@
                                     </div>
                                 </div>
                                 
-                               <!--  <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
-                                    
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>   Sign Up with Facebook</button>
-                                    </div>                                           
-                                        
-                                </div> -->
-                                
+                                                              
                                 
                                 
                             </form>
@@ -261,7 +268,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/tonemelogo.png" class="img-responsive" alt="">
+                        <img src="img/workouts/arms.png" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 portfolio-item">
