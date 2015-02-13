@@ -38,6 +38,9 @@ function login($username, $password, $mysqli) {
 	if($pass == $password)
 	{
 		//correct password
+		$_SESSION['username'] = $username;
+		$_SESSION['user_id'] = $id;
+		$_SESSION['login_string'] = $password;
 		return true;
 	}else{
 		//incorrect password
@@ -47,6 +50,54 @@ function login($username, $password, $mysqli) {
 		//user does not exist
 		return false;
 	}
+}
+
+function login_check($mysqli) {
+    // Check if all session variables are set 
+    if (isset($_SESSION['user_id'], 
+                        $_SESSION['username'], 
+                        $_SESSION['login_string'])) {
+ 
+        $user_id = $_SESSION['user_id'];
+        $login_string = $_SESSION['login_string'];
+        $username = $_SESSION['username'];
+ 
+        // Get the user-agent string of the user.
+        $user_browser = $_SERVER['HTTP_USER_AGENT'];
+ 
+        if ($stmt = $mysqli->prepare("SELECT password 
+                                      FROM members 
+                                      WHERE id = ? LIMIT 1")) {
+            // Bind "$user_id" to parameter. 
+            $stmt->bind_param('i', $user_id);
+            $stmt->execute();   // Execute the prepared query.
+            $stmt->store_result();
+ 
+            if ($stmt->num_rows == 1) {
+                // If the user exists get variables from result.
+                $stmt->bind_result($password);
+                $stmt->fetch();
+                $login_check = $password;
+ 
+                if ($login_check == $login_string) {
+                    // Logged In!!!! 
+                    return true;
+                } else {
+                    // Not logged in 
+                    return false;
+                }
+            } else {
+                // Not logged in 
+                return false;
+            }
+        } else {
+            // Not logged in 
+            return false;
+        }
+    } else {
+        // Not logged in 
+        return false;
+    }
 }
 
 function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
