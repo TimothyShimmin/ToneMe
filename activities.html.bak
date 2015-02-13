@@ -184,7 +184,7 @@
                                        <div style="font-size:45px"><b>NEXT EXERCISE</b></div>
                                     </div>
                                     <div class="col-xs-3 text-right">
-                                        <i id="next" onclick="changeImage()" class="fa fa-chevron-circle-right fa-5x"></i>
+                                        <i id="next" onclick="changeImage()" class="fa fa-chevron-circle-right fa-5x" scr=""></i>
                                         <Script>
                                         	function changeImage()
                                         	{
