@@ -14,20 +14,21 @@ wholedude {
 }
 .limb {
 	z-index="2";
+/*	visibility: hidden;
+*/
 
 }
 .abs {
 	position:absolute;
 }
 
-arm-left {
-	top: -100px;
-	left:100px;
+/*.larm {
+	visibility: hidden;
 
 }
 
-arm-right {
-
+.rarm {
+	visibility: hidden;
 
 }
 
@@ -37,4 +38,4 @@ leg-left {
 
 leg-right {
 
-}
+}*/

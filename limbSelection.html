@@ -7,7 +7,7 @@
 		<div>
 			<form action="functions.php">
 				<p>
-					<input id="Arms" type="checkbox" name="Arms"  placeholder="Arms"> Arms
+					<input id="Arms" type="checkbox" name="Arms"  placeholder="Arms" > Arms
 				</p> 
 				<p>
 					<input id="Legs" type="checkbox" name="Legs"  placeholder="Legs"> Legs  
@@ -25,13 +25,24 @@
 			<!-- SUBMISSION BUTTON -->
 			<input type="submit" value="Submit">
 		</p>
+		
+			<!-- javascript! -->
+		<script>
+		function check() {
+			document.getElementById("myCheck").checked = true;
+		}
+
+		function uncheck() {
+			document.getElementById("myCheck").checked = false;
+		}
+		</script>
 	</form>
 </div>
 
 <div class="bodyOverlap"> <!-- body image  *** overlap limbs -->
 	<img class="wholedude abs"  usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">
-	<img class="limb abs" src="img\body\arm-left.png" alt="left arm" style="top:97px;" width="100" height="185">
-	<img class="limb abs" src="img\body\arm-right.png" alt="right arm" style="top:97px; left:200px;" width="100" height="185">
+	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" style="top:97px;" width="100" height="185">
+	<img class="limb abs rarm" src="img\body\arm-right.png" alt="right arm" style="top:97px; left:200px;" width="100" height="185">
 	<img class="limb abs" src="img\body\leg-left.png" alt="left leg" style="top:282px; left:46px;" width="103" height="220">
 	<img class="limb abs" src="img\body\leg-right.png" alt="right leg" style="top:282px; left:350px;" width="100" height="220">
 
