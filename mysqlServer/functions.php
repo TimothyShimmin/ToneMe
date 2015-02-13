@@ -27,15 +27,17 @@ function start_session(){
 }
 
 function login($username, $password, $mysqli) {
-	if($stmt = $mysqli->prepare("SELECT id, username, password FROM users"))
+	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ".$username." AND password = ".$password))
 	{
+
+
 	$stmt->execute();
 	$stmt->store_result();
 	
 	$stmt->bind_result($id, $user, $pass);
 	$stmt->fetch();
 	
-	if($password == $pass && $username == $user)
+	if($stmt->num_rows == 1)
 	{
 		//correct password
 		$_SESSION['username'] = $username;
