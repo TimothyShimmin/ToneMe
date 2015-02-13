@@ -1,13 +1,10 @@
 <?php
-print_r("We promise stuff will be here soon");
-die();
-
 include_once 'connect.php';
 include_once 'functions.php';
 
 start_session(); // Our custom secure way of starting a PHP session.
  
-if (isset($_POST['username']$_POST['password'])) {
+if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = $_POST['username'];
     $password = $_POST['password']; 
 

@@ -1,9 +1,3 @@
-
-/*
-	The configuration is a construst of the clearDB system we have online.
-	Centralized Database system is held on Sequel Pro.
-*/
-
 <?php
 define("SERVERPORT","3306");
 
