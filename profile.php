@@ -82,7 +82,7 @@
                     <p><strong>Weight: </strong> 155 lb </p>
                     <p><strong>Current activities group: </strong> Arms, Legs, Core, Cardio </p>
 
-                    <p><strong>Current activities group: </strong> Arms, Legs, Core, Cardio</p>
+                    <!-- <p><strong>Current activities group: </strong> Arms, Legs, Core, Cardio</p> -->
                     
                     
                 </div>             
