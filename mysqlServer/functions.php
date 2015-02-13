@@ -54,6 +54,12 @@ function login($username, $password, $mysqli) {
 	}
 }
 
+/*
+	Login data used for accessing profile.html
+	 in the toneme application layout format.
+	 i
+*/
+
 function login_check($mysqli) {
     // Check if all session variables are set 
     if (isset($_SESSION['user_id'], 
