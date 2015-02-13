@@ -19,4 +19,6 @@ if (isset($_POST['username']$_POST['password'])) {
     // The correct POST variables were not sent to this page. 
     echo 'Invalid Request';
 }
+
+echo "we are hitting login.php";
 ?>
