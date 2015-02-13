@@ -1,5 +1,6 @@
 <?php
 print_r($_POST);
+die();
 
 include_once 'connect.php';
 include_once 'functions.php';
