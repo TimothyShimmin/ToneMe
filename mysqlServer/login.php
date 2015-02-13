@@ -2,6 +2,7 @@
 include_once 'connect.php';
 include_once 'functions.php';
 
+<<<<<<< HEAD
 start_session(); // Our custom secure way of starting a PHP session.
  
 if (isset($_POST['username'] && $_POST['password'])) {
@@ -9,6 +10,16 @@ if (isset($_POST['username'] && $_POST['password'])) {
     $password = $_POST['password']; 
  
     if (login($username, $password, $mysqli) == true) {
+=======
+//session_start();  //Our custom secure way of starting a PHP session.
+echo("<br>");
+print_r($_POST);
+
+if (isset($_POST['login-username']) && isset($_POST['login-password'])) {
+    $user = $_POST['login-username'];
+    $password = $_POST['login-password'];
+    if (login($username, $password, $mysqli)) {
+>>>>>>> c511215a9b47db4afe07a2dc66abac5626ab34c4
         // Login success 
         header('Location: ../profile.html');
     } else {
@@ -20,5 +31,5 @@ if (isset($_POST['username'] && $_POST['password'])) {
     echo 'Invalid Request';
 }
 
-echo "we are hitting login.php";
+//echo "we are hitting login.php";
 ?>

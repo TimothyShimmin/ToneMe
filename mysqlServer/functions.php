@@ -27,26 +27,26 @@ function start_session(){
 }
 
 function login($username, $password, $mysqli) {
-	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ".$username." AND password = ".$password))
+	if($stmt = $mysqli->prepare("SELECT id FROM users WHERE username = "+$username+" AND password = "+$password))
 	{
 	$stmt->execute();
 	$stmt->store_result();
 	
 	$stmt->bind_result($id, $user, $pass);
 	$stmt->fetch();
-	
-	if($stmt->num_rows == 1)
+
+	if($mysqli->num_rows== 1)
 	{
 		//correct password
 		$_SESSION['username'] = $username;
 		$_SESSION['user_id'] = $id;
 		$_SESSION['login_string'] = $password;
 		return true;
-	}else{
+	} else {
 		//incorrect password
 		return false;
 	}
-	}else{
+	} else {
 		//user does not exist
 		return false;
 	}
@@ -55,7 +55,7 @@ function login($username, $password, $mysqli) {
 /*
 	Login data used for accessing profile.html
 	 in the toneme application layout format.
-	 i
+	 ia
 */
 
 function login_check($mysqli) {
@@ -117,7 +117,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($arms)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
@@ -125,7 +125,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($core)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
@@ -133,7 +133,7 @@ function returnListActivities($mysqli, $legs, $arms, $core, $cardio) {
 		}
 		if(!is_null($legs)){
 			if($alreadyAddingStuff == true){
-				$sql .= " OR "
+				$sql .= " OR ";
 			} else {
 				$alreadyAddingStuff = true;
 			}
