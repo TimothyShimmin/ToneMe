@@ -35,7 +35,7 @@ function login($username, $password, $mysqli) {
 	$stmt->bind_result($id, $user, $pass);
 	$stmt->fetch();
 	
-	if($pass == $password && $user == $username)
+	if($password == $pass && $username == $user)
 	{
 		//correct password
 		$_SESSION['username'] = $username;
