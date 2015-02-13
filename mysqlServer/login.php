@@ -1,6 +1,6 @@
 <?php
 include_once 'connect.php';
-include_once 'function.php';
+include_once 'functions.php';
 
 start_session(); // Our custom secure way of starting a PHP session.
  
