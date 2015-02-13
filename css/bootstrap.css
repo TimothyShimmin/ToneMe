@@ -964,6 +964,7 @@ hr {
   margin-bottom: 21px;
   border: 0;
   border-top: 1px solid #ecf0f1;
+
 }
 .sr-only {
   position: absolute;
@@ -6569,4 +6570,7 @@ a.list-group-item-danger.active:focus {
 }
 .popover {
   color: #2c3e50;
+}
+.end-footer{
+  color:#bfb1ae;
 }

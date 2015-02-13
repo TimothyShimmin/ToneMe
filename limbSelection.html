@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <link href="css/bodyImage.css" rel="stylesheet">
-
+ 
 <body>
 	<h1> TEST BODY SELECTION </H1>
 		<div>
 			<form action="functions.php">
 				<p>
-					<input  type="checkbox" name="Arms"  placeholder="Arms" onclick="check()"> Arms
+					<input  type="checkbox" name="Arms"  placeholder="Arms" onclick="check(this)"> Arms
 				</p> 
 				<p>
-					<input id="Legs" type="checkbox" name="Legs"  placeholder="Legs"> Legs  
+					<input id="Legs" type="checkbox" name="Legs" onclick="check(this)" placeholder="Legs"> Legs  
 				</p>   
 				<p>                                   
-					<input id="Core" type="checkbox" name="Core"  placeholder="Core"> Core    
+					<input id="Core" type="checkbox" name="Core" onclick="check(this)" placeholder="Core"> Core    
 				</p>
 				<p>                                    
-					<input id="Cardio" type="checkbox" name="Cardio"  placeholder="Cardio"> Cardio        
+					<input id="Cardio" type="checkbox" name="Cardio" onclick="check(this)" placeholder="Cardio"> Cardio        
 				</p>
 		<!-- <p>
 			<input id="heart" type="checkbox" name="heart" value="" placeholder="heart">Heart
@@ -28,23 +28,24 @@
 
 			<!-- javascript! -->
 		<script>
-		function check() {
-			document.getElementById("Arms").style.visibility = "visible";
+		function check(inputElement) {
+			var limbName=inputElement.getAttribute("name");
+			if(document.getElementById(limbName).style.visibility == "visible"){
+				document.getElementById("Arms").style.visibility = "hidden";
+			} else {
+				document.getElementById("Arms").style.visibility = "visible";
+			}
 		}
-
-		// function uncheck() {
-		// 	document.getElementById("myCheck").checked = false;
-		// }
 		</script>
 	</form>
 </div>
 
 <div class="bodyOverlap"> <!-- body image  *** overlap limbs -->
-	<img class="wholedude abs" id="Arms" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">
-	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" style="top:97px;" width="100" height="185">
+	<img class="wholedude abs" usemap="bodyMap" src="img\body\wholedude.png" alt="torso" width="300" height="500">
+	<img class="limb abs larm" src="img\body\arm-left.png" alt="left arm" style="top:97px;" id="Arms" width="100" height="185">
 	<img class="limb abs rarm" src="img\body\arm-right.png" alt="right arm" style="top:97px; left:200px;" width="100" height="185">
-	<img class="limb abs" src="img\body\leg-left.png" alt="left leg" style="top:282px; left:46px;" width="103" height="220">
-	<img class="limb abs" src="img\body\leg-right.png" alt="right leg" style="top:282px; left:350px;" width="100" height="220">
+	<img class="limb abs lleg" src="img\body\leg-left.png" alt="left leg" style="top:282px; left:46px;" width="103" height="220">
+	<img class="limb abs rleg" src="img\body\leg-right.png" alt="right leg" style="top:282px; left:350px;" width="100" height="220">
 
 
 <!-- 	multiple links on the image
