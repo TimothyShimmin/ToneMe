@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            <b>Name of Exercise : </b>
+                            <b>Name of Exercise:&nbsp;<p id="exName">Push Ups  </p></b> 
                         </h1>
                         
                     </div>
@@ -150,14 +150,65 @@
                                 <h3 class="panel-title"><i class="fa fa-eye fa-fw fa-2x"></i> &nbsp;Image Of Exercise</h3>
                             </div>
                             <div class="panel-body">
-                                <div class="workout-chart"><center><img src="img/workouts/arms.png" alt="Pic" title="Workout Image" /></center></div>
+                                <div class="workout-chart"><center><img id="image" src="img/workouts/arms.png" alt="Pic" title="Workout Image" /></center></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- /.row -->
 
-                
+                  <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-chevron-circle-left fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div style="font-size:45px"><b>PREVIOUS EXERCISE</b></div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                	<div class="col-xs-9 text-left">
+                                       <div style="font-size:45px"><b>NEXT EXERCISE</b></div>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                        <img id="next" onclick="changeImage()" class="fa fa-chevron-circle-right fa-5x" scr=""></i>
+                                        <Script>
+                                        	function changeImage()
+                                        	{
+                                        		var x = Document.getElementById("image");                       
+                                        		if(x.src == "img/workouts/arms.png")
+                                        		{
+                                        			x.src ="img/workouts/legs.png";
+                                        			var y = Document.getElementById("exName");
+                                        			var z = y.replace("Push Ups","Leg Lifts")
+                                        			y.innerHTML = ""
+                                        		}
+                                        	}
+                                     	</Script>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <!-- /.row -->
 
             </div>
             <!-- /.container-fluid -->
