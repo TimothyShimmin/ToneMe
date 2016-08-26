@@ -66,7 +66,7 @@
                            <?php if (login_check($mysqli) == true){
                               echo $logged;	
                               ?> 
-                              <a href='mysql server/logout.php'>Log out</a>;
+                              <a >Log out</a>
 
                               <?php } ?>
 
@@ -126,7 +126,7 @@
                                 <div class="col-sm-12 controls">
                                    
                                    
-                                  <input id="btn-login" type="submit" class="btn btn-success" value="Login" onClick="document.getElementById('loginform').submit()"> 
+                                  <input id="btn-login" type="submit" class="btn btn-success" value="Login" > 
 
                                   <a id="btn-fblogin" href="#" class="btn btn-primary" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign up</a>
 
@@ -366,6 +366,8 @@
                             </div>
                         </div>
                     </form>
+										<button type="submit" class="btn btn-success btn-lg" onclick="location.href='activities.html'">---ACTIVITIES---</button>
+					<button type="submit" class="btn btn-success btn-lg" onclick="location.href='limbSelection.html'">---LIMB SELECTION---</button>
                 </div>
             </div>
         </div>
@@ -441,7 +443,7 @@
                             <h2>Arms Exercises</h2> <!-- top of modal -->
                             <hr class="star-primary">
                             <img src="img/workouts/arms.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
-                            <p>Arms exercises focus on strengthening the biceps, triceps and forearms. These exercises help uild muscle as well as tone pre-existing muscles. These exercises often require weights such as dumb bells or kettle bells</p>
+                            <p>Arms exercises focus on strengthening the biceps, triceps and forearms. These exercises help build muscle as well as tone pre-existing muscles. These exercises often require weights such as dumb bells or kettle bells</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -465,7 +467,7 @@
                             <h2>Legs Exercises</h2>
                             <hr class="star-primary">
                             <img src="img/workouts/legs.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
-                            <p>Leg exercises focus on strengthening the thign and calves. These exercises often include heart/cardio/endurance enhancing. Exercises can both be used with or without the use of free weights.</p>
+                            <p>Leg exercises focus on strengthening the thigh and calves. These exercises often include heart/cardio/endurance enhancing. Exercises can both be used with or without the use of free weights.</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -489,7 +491,7 @@
                             <h2>Cardio Exercises</h2>
                             <hr class="star-primary">
                             <img src="img/workouts/cardio.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
-                            <p>These exercises are spcifically geared towards increasing endurance and require no additional free weights.</p>
+                            <p>These exercises are specifically geared towards increasing endurance and require no additional free weights.</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -512,8 +514,8 @@
                         <div class="modal-body">
                             <h2>Core Exercises</h2>
                             <hr class="star-primary">
-                            <img src="img/workouts/Core.png" class="img-responsive img-centered" alt="" width="300px" height="300px">
-                            <p>These exercises focus on abdomen and lower back muscles (obligues). They require no additional free weights.</p>
+                            <img src="img/workouts/Core.png" class="img-responsive img-centered" alt="" width="60%" height="60%">
+                            <p>These exercises focus on abdomen and lower back muscles (obliques). They require no additional free weights.</p>
                             
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
